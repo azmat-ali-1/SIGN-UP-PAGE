@@ -1,38 +1,132 @@
 .App {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #B1D9DB;
+  height: 100vh;
+}
+.App-right{
+  background-color: white;
+  border-radius: 30px 0 0 30px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+form input{
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 1.2em;
+}
+form button{
+  background-color: #B1D9DB;
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  color: white;
+}
+.App-header{
+  display: flex;
+ justify-content: space-between;
+}
+.icon{
+  display: flex;
+  border: 1px solid black;
+  padding: 0.5em;
+  border-radius: 0.5em;
+ 
+}
+.icon img{
+  width: 25px;
+  height:25px;
+}
+.App-right-1 h1{
+  justify-self: start;
+}
+.App-right-1{
+  margin: 5% 20%;
+  width: 55%;
+}
+
+.App-left h1{
+  margin: 3em 1.5em;
+  color: white;
+  font-size: 1.6em;
+}
+.App-left{
+  position: relative;
+}
+.App-left img{
+  position: absolute;
+  width: 461.00000338149647px;
+height: 460.000003682237px;
+top: 120.6227264404297px;
+/* top:8em; */
+left: 75.567138671875px;
+/* left:8em; */
+transform: rotate(3.15deg);
+
+}
+.App-right h1{
+  font-size: 1.6em;
+}
+.App-right p{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media (max-width:890px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+  }
+  .App-left img{
+    position:static;
+    width: 100%;
+    height: 400px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  }
+  .App-left h1{
+    margin-bottom: 0;
+  }
+  .App-right{
+    border-radius: 1em;
+  }
+  .App-header{
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  .App-right-1{
+    margin: 22%;
+  }
+} 
+
+@media(max-width:490px){
+  .App{
+    display: flex;
+    flex-direction: column;
+  }
+  .App-left img{
+    position:static;
+    width: 100%;
+    height: 400px;
+
+  }
+  .App-left h1{
+    margin-bottom: 0;
+  }
+  .App-right{
+    border-radius: 1em;
+  }
+  .App-inside{
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .App-right-1{
+    margin: 22%;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#result{
+  text-align: center;
+  font-size: 1em;
+  margin-top: 1em;
 }
